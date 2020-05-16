@@ -1,0 +1,52 @@
+<div class="container">
+    <div  class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" src="{{user_avatar}}" alt="...">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{user_name}}</h4>
+                    <p>Your ID: {{user_id}}</p>
+                </div>
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label  class="col-md-5 control-label">Connect to ID:</label>
+                    <div class="col-md-7">
+                        <div class="input-group">
+                            <input type="text" class="form-control" ng-model="connectto" placeholder="Id of the person you want to chat with">
+                            <span class="input-group-btn">
+							<button class="btn btn-default" ng-click="connecttopeer()"  type="button">Connect</button>
+						  </span>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="chat" >
+                <div class="media" ng-repeat="chat in chat_messages">
+                    <div ng-if="chat.type=='notification'" class="text-center notification"><em>{{chat.message}}</em></div>
+                    <div ng-if="chat.type!='notification'" class="{{chat.self == true? 'media-left': 'media-right'}}">
+                        <a href="#">
+                            <img class="media-object" alt="64x64" ng-src="{{chat.avatar}}" data-holder-rendered="true" style="width: 64px; height: 64px;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        {{chat.message}}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="input-group">
+                    <input type="text" class="form-control message" id="message" ng-model="message"ng-enter="sendMessage()" ng-click="sendMessage()" placeholder="Message">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" id="sendbutton" ng-click="sendMessage()" type="button">Send</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
