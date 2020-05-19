@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="no-padding visible-lg col-md-7 col-lg-6">
-            <img class="home_img" src="../assets/img/home.png" />
+            <img class="home_img" src="../assets/img/home.png" alt="serverless p2p Chat" />
         </div>
         <div class="no-padding col-xs-12 col-sm-12 col-md-12 col-lg-6">
             <div class="center">
@@ -9,8 +9,7 @@
                     <h1>EASIEST WAY TO CONNECT<br> WITH FRIENDS</h1>
                     <div class="form-group">
                         <div class="form-group_block">
-                           
-                            <input type="text" class="form-control" ng-enter="proceed()"  ng-model="name" placeholder="Your name">
+                            <input type="text" class="form-control" autocomplete="off" name="name" ng-enter="proceed()"  ng-model="name" placeholder="Your name">
                             <button ng-click="proceed()" class="btn btn-primary">Proceed</button>
                         </div>
                     </div>

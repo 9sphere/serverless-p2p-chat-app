@@ -1,7 +1,7 @@
 * {
   margin:0;
   padding:0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body{
@@ -58,6 +58,7 @@ input[type="text"] {
     body {
         padding: 10px;
         font-size:1rem;
+        background:#f9f9f9;
     }
 
     .center{
@@ -69,6 +70,11 @@ input[type="text"] {
       border: 1px solid #eee;
       box-shadow: 0 2px 10px 0px #eee;
       border-radius: 30px;
+      background-color: #fff;
+    }
+
+    h1{
+      font-size: 3rem!important;
     }
 
 }
@@ -98,6 +104,19 @@ input[type="text"] {
     width: 100%;
 }
 
+.form-control{
+  height:50px;
+}
+
 h1{
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.btn{
+  border-radius: 0px;
+}
+
+.form-group_block input[type="text"] {
+  border-radius: 4px 0 0 4px!important;
 }
