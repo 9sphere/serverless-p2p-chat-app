@@ -1,7 +1,8 @@
 * {
   margin:0;
   padding:0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 body{
@@ -14,6 +15,9 @@ body{
   font-weight: normal; 
 }
 
+h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 .media-body{
 	padding: 10px;
     border: 1px solid #ccc;
@@ -110,7 +114,6 @@ input[type="text"] {
 
 h1{
   font-size: 4rem;
-  font-weight: 600;
 }
 
 .btn{
