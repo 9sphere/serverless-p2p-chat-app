@@ -1,6 +1,14 @@
+<style>
+ body{
+     background:white;
+ }
+</style>
 <div class="container">
     <div  class="row">
         <div class="col-md-6 col-md-offset-3">
+            <div class="btn_back" ng-click="goBackHome()">
+                <i class="glyphicon glyphicon-menu-left"></i><span>Go Back</span>
+            </div>
             <div class="media">
                 <div class="media-left">
                     <img class="media-object" src="{{user_avatar}}" alt="...">
@@ -10,12 +18,12 @@
                     <p>Your ID: {{user_id}}</p>
                 </div>
             </div>
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label  class="col-md-5 control-label">Connect to ID:</label>
-                    <div class="col-md-7">
+            <form class="form-horizontal head_connect">
+                <div class="form-group  ">
+                    <!-- <label  class="col-md-5 control-label">Connect to ID:</label> -->
+                    <div class="col-md-12">
                         <div class="input-group">
-                            <input type="text" class="form-control" ng-model="connectto" placeholder="Id of the person you want to chat with">
+                            <input type="text" class="form-control" ng-model="connectto" placeholder="Enter ID of the person you want to chat with">
                             <span class="input-group-btn">
 							<button class="btn btn-default" ng-click="connecttopeer()"  type="button">Connect</button>
 						  </span>
@@ -31,19 +39,19 @@
                     <div ng-if="chat.type=='notification'" class="text-center notification"><em>{{chat.message}}</em></div>
                     <div ng-if="chat.type!='notification'" class="{{chat.self == true? 'media-left': 'media-right'}}">
                         <a href="#">
-                            <img class="media-object" alt="64x64" ng-src="{{chat.avatar}}" data-holder-rendered="true" style="width: 64px; height: 64px;">
+                            <img class="media-object media-object_chat" alt="64x64" ng-src="{{chat.avatar}}" data-holder-rendered="true"  >
                         </a>
                     </div>
-                    <div class="media-body">
+                    <div class="media-body_chat">
                         {{chat.message}}
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="chat_input_block">
                 <div class="input-group">
                     <input type="text" class="form-control message" id="message" ng-model="message"ng-enter="sendMessage()" ng-click="sendMessage()" placeholder="Message">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" id="sendbutton" ng-click="sendMessage()" type="button">Send</button>
+                        <button class="btn btn-default" id="sendbutton" ng-click="sendMessage()" type="button"><i class="glyphicon glyphicon-send"></i></button>
                     </span>
                 </div>
             </div>
