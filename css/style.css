@@ -1,7 +1,8 @@
 * {
   margin:0;
   padding:0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 body{
@@ -13,6 +14,10 @@ body{
   padding: 0;
   font-weight: normal; 
 }
+h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
 
 .media-right{
   padding-right: 10px;
@@ -21,9 +26,6 @@ body{
 }
 
 .media-body_chat{
-	/* padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px; */
     width: 100vw;
     word-break: break-all;
     background: white;
@@ -132,7 +134,6 @@ input {
 
 h1{
   font-size: 4rem;
-  font-weight: 600;
 }
 
 .btn{
