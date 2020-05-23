@@ -91,4 +91,9 @@ function MainController($scope, $rootScope) {
             connectedPeers[$scope.connectto] = 1;
         }
     }
+
+    $scope.goBackHome = function(){
+        localStorage.removeItem("name");
+        window.location.reload();
+    }
 };

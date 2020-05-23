@@ -14,38 +14,58 @@ body{
   padding: 0;
   font-weight: normal; 
 }
-
 h1{
   font-family: 'Open Sans Condensed', sans-serif;
 }
-.media-body{
-	padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+
+.media-right{
+  padding-right: 10px;
+  padding-left: 0px;
+  padding-top: 4px;
 }
-.media-object{
-	border-radius: 50%;
+
+.media-body_chat{
+    width: 100vw;
+    word-break: break-all;
+    background: white;
+    padding: 10px;
+    border-radius: 0 15px 15px 15px;
+    font-size: 1.4rem;
+}
+.media-object_chat{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px 1px #dddddd;
+	/* border-radius: 50%; */
 }
 .chat {
-	border: 1px solid #ccc;
-    border-radius: 4px 4px 0px 0px;
+  /* border: 1px solid #ccc; */
+    background: #f9f9f9;
+    border-radius: 15px 15px 0px 0px;
     padding: 20px;
-    max-height: 500px;
-    min-height: 500px;
-    overflow-y: scroll;
+    max-height: 60vh;
+    min-height: 60vh;
+    overflow-y: auto;
+}
+
+.chat>.media{
+  display: flex;
 }
 .peer_id {
 	padding-top: 7px;
 }
 #message {
 	border-radius: 0 0 0px 4px;
-    border-top: 0;
+    /* border-top: 0; */
     height: 50px;
 }
 #sendbutton{
-	height: 50px;
-    border-radius: 0 0px 4px 0;
-    border-top: 0;
+  width: 60px;
+  height: 50px;
+  border-radius: 0 15px 15px 0;
+  border: 0;
 }
 .notification {
     padding: 10px;
@@ -54,9 +74,9 @@ input {
     -webkit-box-shadow:none !important;
     box-shadow:none !important;
 }
-input[type="text"] {
+/* input[type="text"] {
     border-radius: 4px !important;
-}
+} */
 
 @media only screen and (max-width: 1200px) {
     body {
@@ -121,5 +141,60 @@ h1{
 }
 
 .form-group_block input[type="text"] {
-  border-radius: 4px 0 0 4px!important;
+  border-color: #f9f9f9;
+  border-radius: 15px 0 0 15px!important
+}
+
+.form-group_block>button{
+  border-radius: 0 15px 15px 0!important;
+  border-color: #f9f9f9;
+  height: 50px;
+  width: 25%;
+}
+
+.head_connect{
+  padding-top:10px;
+}
+
+.head_connect .input-group>.input-group-btn>button{
+    border-radius: 0 15px 15px 0!important;
+    border-color: #f9f9f9;
+    height: 50px;
+    background: #6b6b6b;
+    color: white;
+}
+
+.head_connect .input-group>input{
+  height: 50px;
+  border-color: #f9f9f9;
+  border-radius: 15px 0 0 15px!important
+}
+
+.chat_input_block{
+    background: #f9f9f9;
+    height: 10vh;
+    border-radius: 0 0 15px 15px;
+}
+
+.chat_input_block .input-group{
+  padding: 0 20px;
+}
+
+.chat_input_block .input-group>input{
+  border-radius: 15px 0 0 15px!important;
+  border: 0px;
+}
+
+.btn_back{
+  padding-top: 10px;color: #c7c7c7;
+  cursor: pointer;
+}
+
+.btn_back>i{
+  font-size: 1.2rem;
+}
+
+.btn_back>span{
+  font-size: 1.3rem;
+  margin-left:5px;
 }
