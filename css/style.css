@@ -37,17 +37,18 @@ h1{
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  box-shadow: 2px 2px 4px 1px #dddddd;
+  box-shadow: 2px 2px 4px 1px #ffffff;
 	/* border-radius: 50%; */
 }
 .chat {
   /* border: 1px solid #ccc; */
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
     border-radius: 15px 15px 0px 0px;
     padding: 20px;
     max-height: 60vh;
     min-height: 60vh;
     overflow-y: auto;
+    background: linear-gradient(to bottom,#fbffdd, #fff3e5, #fbd1b7);
 }
 
 .chat>.media{
@@ -82,7 +83,8 @@ input {
     body {
         padding: 10px;
         font-size:1rem;
-        background:#f9f9f9;
+        background:#193544;
+        background-size: cover;
     }
 
     .center{
@@ -119,7 +121,7 @@ input {
 }
  
 .center>div{
-  padding: 10vh;
+  padding: 6vh;
   width: fit-content;
 }
 
@@ -147,21 +149,36 @@ h1{
 
 .form-group_block>button{
   border-radius: 0 15px 15px 0!important;
-  border-color: #f9f9f9;
-  height: 50px;
-  width: 25%;
+  border-color: #3da4ab;
+  background-color: #3da4ab;
+  height: 50px; 
+}
+
+.btn-primary:hover{
+  background-color: #2f8c92;
+  border-color: #2f8c92;
 }
 
 .head_connect{
   padding-top:10px;
 }
+ 
 
 .head_connect .input-group>.input-group-btn>button{
     border-radius: 0 15px 15px 0!important;
-    border-color: #f9f9f9;
+    border-color: #3da4ab;
     height: 50px;
-    background: #6b6b6b;
+    background: #3da4ab;
     color: white;
+}
+
+.head_connect .input-group>.input-group-btn>button:hover{
+  background-color: #2f8c92;
+  border-color: #2f8c92;
+}
+
+.glyphicon {
+  color: #2f8c92;
 }
 
 .head_connect .input-group>input{
@@ -171,13 +188,14 @@ h1{
 }
 
 .chat_input_block{
-    background: #f9f9f9;
-    height: 10vh;
+    /* background: #f9f9f9; */
+    background:#fbd1b7;
+    height: auto;
     border-radius: 0 0 15px 15px;
 }
 
 .chat_input_block .input-group{
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .chat_input_block .input-group>input{
@@ -188,6 +206,7 @@ h1{
 .btn_back{
   padding-top: 10px;color: #c7c7c7;
   cursor: pointer;
+  text-align: right;
 }
 
 .btn_back>i{
@@ -196,5 +215,11 @@ h1{
 
 .btn_back>span{
   font-size: 1.3rem;
-  margin-left:5px;
+  margin-right: 5px;
 }
+
+.p-0{
+  padding:0px;
+}
+
+ 
