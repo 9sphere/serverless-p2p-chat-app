@@ -5,9 +5,9 @@
 </style>
 <div class="container">
     <div  class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 col-md-offset-3 p-0">
             <div class="btn_back" ng-click="goBackHome()">
-                <i class="glyphicon glyphicon-menu-left"></i><span>Go Back</span>
+                <span>Logout</span>
             </div>
             <div class="media">
                 <div class="media-left">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading">{{user_name}}</h4>
-                    <p>Your ID: {{user_id}}</p>
+                    <p>Your ID: <span>{{user_id}}</span></p>
                 </div>
             </div>
             <form class="form-horizontal head_connect">
@@ -25,7 +25,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" ng-model="connectto" placeholder="Enter ID of the person you want to chat with">
                             <span class="input-group-btn">
-							<button class="btn btn-default" ng-click="connecttopeer()"  type="button">Connect</button>
+							<button class="btn btn-primary" ng-click="connecttopeer()"  type="button">Connect</button>
 						  </span>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
 
             </form>
         </div>
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 col-md-offset-3 p-0">
             <div class="chat" >
                 <div class="media" ng-repeat="chat in chat_messages">
                     <div ng-if="chat.type=='notification'" class="text-center notification"><em>{{chat.message}}</em></div>
